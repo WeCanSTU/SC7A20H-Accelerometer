@@ -1,104 +1,106 @@
 [中文](https://github.com/WeCanSTU/SC7A20H-Accelerometer/blob/main/README_CN.md) / [English](https://github.com/WeCanSTU/SC7A20H-Accelerometer/blob/main/README.md)
 
 
-### **概述**
+### **Overview**
 
-SC7A20H 模组是一款高性能、低功耗的三轴数字加速度传感器，基于 SC7A20H 芯片开发。它支持 **I2C** 和 **SPI** 通信接口，具备灵活的加速度量程设置、宽温工作能力（-40°C 至 +85°C）和低功耗特性，适用于消费电子、工业控制、运动健康等多个领域。其小巧的设计和引脚布局，使开发者能够快速集成于严苛环境和多种应用场景中，无缝实现创新产品设计。
+The SC7A20H module is a high-performance, low-power 3-axis digital accelerometer sensor based on the SC7A20H chip. It supports **I2C** and **SPI** communication interfaces, offering flexible acceleration range settings, wide operating temperature capability (-40°C to +85°C), and low power consumption. Designed for consumer electronics, industrial control, sports health, and other fields, its compact design and pin layout allow developers to quickly integrate it into challenging environments and a variety of application scenarios, enabling seamless product innovation.
 
 <div align="center">
   <img src="./resources/overview.png" alt="Overview" width="600">
-  <p><em>图1：SC7A20H传感器模块概览</em></p>
+  <p><em>Figure 1: SC7A20H Sensor Module Overview</em></p>
 </div>
 
-### **核心特性**
+### **Key Features**
 
-SC7A20H 模组结合了多种技术优势，为开发者提供了多元化的选择和灵活性：
+The SC7A20H module combines a variety of technical advantages, providing developers with diversified options and flexibility:
 
-- **高精度传感能力**
-    - 支持四档加速度量程：±2g、±4g、±8g 和 ±16g，适用于从微小运动到强烈振动的多场景需求。
-    - 输出数据速率（ODR）：支持 1Hz 至 400Hz，可根据应用场景自由调整。
-    - 内置 32 级 FIFO 缓存：减少主控设备读取数据的频率，优化系统功耗和运行效率。
-- **宽温工作范围**
-    - 工作温度范围：**40°C 至 +85°C**，能够适应从极寒到高温的严苛环境，满足工业、户外和其他特殊应用的使用需求。
-    - **贮存温度范围：-55°C 至 +150°C**，即便在极端存储条件下，依然能保持稳定性能和可靠性。
-- **宽电压兼容性**
-    - 工作电压范围：**1.71V 至 3.6V**，适配多种硬件平台。
-    - 支持 **1.8V 数字 IO 口兼容**，便于与主流低功耗芯片直接通信。
-- **灵活的通信与中断机制**
-    - 支持 **I2C**（速率最高达 400kHz）和 **SPI**（速率最高达 10MHz）双通信协议，兼容主流单片机和嵌入式平台。
-    - 提供丰富的中断功能，包括自由落体检测、活动监测、方向识别等智能功能，通过 **INT1** 和 **INT2** 引脚便捷实现。
-- **低功耗设计**
-    - 在低功耗模式下，工作电流仅为 **2µA**，有效延长电池供电设备的续航时间。
+- **High-Precision Sensing Capability**
+    - Supports four acceleration ranges: ±2g, ±4g, ±8g, and ±16g, suitable for scenarios ranging from fine movements to strong vibrations.
+    - Output Data Rate (ODR): Supports 1Hz to 400Hz, adjustable based on application scenarios.
+    - Built-in 32-level FIFO buffer: Reduces the frequency of data reads by the master device, optimizing system power consumption and operational efficiency.
+- **Wide Temperature Operating Range**
+    - Operating temperature range: **40°C to +85°C**, capable of adapting to extreme environments from freezing cold to high heat, meeting the requirements of industrial, outdoor, and other special applications.
+    - **Storage temperature range: -55°C to +150°C**, ensuring stable performance even under extreme storage conditions.
+- **Wide Voltage Compatibility**
+    - Operating voltage range: **1.71V to 3.6V**, compatible with a variety of hardware platforms.
+    - Supports **1.8V digital IO compatibility**, making it easier to communicate directly with mainstream low-power chips.
+- **Flexible Communication and Interrupt Mechanism**
+    - Supports **I2C** (up to 400kHz) and **SPI** (up to 10MHz) dual communication protocols, compatible with mainstream microcontrollers and embedded platforms.
+    - Provides rich interrupt functions, including free-fall detection, activity monitoring, and orientation recognition, conveniently implemented through **INT1** and **INT2** pins.
+- **Low-Power Design**
+    - In low-power mode, the operating current is only **2µA**, effectively extending the battery life of power-constrained devices.
 
-### **模块设计**
+### **Module Design**
 
-SC7A20H 模组的设计特点如下：
+The SC7A20H module features the following design highlights:
 
-1. **引脚布局清晰**
-    
-    结合正面图片标注，引脚以清晰的编号设计，便于开发者快速理解和连接（如 VCC、GND、SCL、SDA 等）。
+1. **Clear Pin Layout**
+   
+    The module adopts a standardized pin design, including VCC, GND, SCL, SDA, etc., allowing developers to quickly understand and connect, reducing development time.
     
     <div align="center">
         <img src="./resources/front.png" alt="Aries Plus Front View" width="600">
-        <p><em>图2：SC7A20H传感器模块前视图</em></p>
+        <p><em>Figure 2: SC7A20H Sensor Module Front View</em></p>
     </div>
     
-2. **尺寸小巧**
-    
-    模块尺寸仅为 **21 mm × 17 mm**，适合空间受限的设备使用。
+2. **Compact Size**
+   
+    The module measures only **21 mm × 17 mm**, making it ideal for devices with space constraints.
         
     <div align="center">
         <img src="./resources/back.png" alt="Back View" width="600">
-        <p><em>图3：SC7A20H传感器模块背面视图</em></p>
+        <p><em>Figure 3: SC7A20H Sensor Module Rear View</em></p>
     </div>
     
     
-3. **信号优化设计**
-    
-    内置滤波电路，有效降低噪声，提升信号稳定性。
+3. **Signal Optimization Design**
+   
+    Built-in filtering circuit effectively reduces noise and improves signal stability.
     
 
-### **技术规格**
+### **Technical Specifications**
 
-| **参数** | **性能描述** |
+| **Parameter** | **Description** |
 | --- | --- |
-| 加速度量程 | ±2g、±4g、±8g、±16g |
-| 输出数据速率 (ODR) | 1Hz 至 400Hz |
-| 通信接口 | I2C（最高 400kHz）/ SPI（最高 10MHz） |
-| 工作电压 | 1.71V 至 3.6V |
-| 兼容电压 | 1.8V 数字 IO |
-| 工作温度范围 | -40°C 至 +85°C |
-| 存储温度范围 | -55°C 至 +150°C |
-| 工作电流 | 2µA（低功耗模式） |
-| 尺寸 | 21 mm × 17 mm |
+| Acceleration Range | ±2g, ±4g, ±8g, ±16g |
+| Output Data Rate | 1Hz to 400Hz |
+| Communication Interface | I2C (up to 400kHz) / SPI (up to 10MHz) |
+| Operating Voltage | 1.71V to 3.6V |
+| IO Compatibility | 1.8V Digital IO |
+| Operating Temperature Range | -40°C to +85°C |
+| Storage Temperature Range | -55°C to +150°C |
+| Operating Current | 2µA (low-power mode) |
+| Dimensions | 21 mm × 17 mm |
 
-### **应用场景**
+### **Application Scenarios**
 
-SC7A20H 模组凭借其宽温工作能力、高性能和低功耗特性，可广泛应用于以下领域：
+With its wide operating temperature range, high performance, and low power consumption, the SC7A20H module can be widely applied in the following fields:
 
-1. **消费电子**
-    - 智能手机、平板电脑中的运动检测；
-    - 屏幕旋转、步态监测和姿态识别。
-2. **工业控制**
-    - 设备状态监测与振动分析；
-    - 工业设备安全监控和性能优化。
-3. **健康与运动**
-    - 穿戴式设备中的运动检测与健康监测；
-    - 活动追踪器和步态分析设备。
-4. **户外与严苛环境**
-    - 农业设备中的倾斜监测与振动检测；
-    - 无人机飞行姿态监测及导航。
-5. **娱乐与虚拟现实**
-    - 游戏手柄、AR/VR 设备中的方向识别与姿态监控。
+1. **Consumer Electronics**
+    - Motion detection for smartphones and tablets.
+    - Screen rotation, gait monitoring, and orientation recognition.
+2. **Industrial Control**
+    - Equipment condition monitoring and vibration analysis.
+    - Safety monitoring and performance optimization for industrial equipment.
+3. **Health and Sports**
+    - Motion and health monitoring in wearable devices.
+    - Activity trackers and gait analysis devices.
+4. **Outdoor and Harsh Environments**
+    - Tilt monitoring and vibration detection in agricultural equipment.
+    - Flight posture monitoring and navigation for drones.
+5. **Entertainment and Virtual Reality**
+    - Orientation recognition and posture monitoring for game controllers and AR/VR devices.
 
-### **总结**
+### **Conclusion**
 
-SC7A20H 模组凭借其高精度、低功耗和宽温工作能力（-40°C 至 +85°C），以及宽电压范围（1.71V 至 3.6V）和 **1.8V 数字 IO 兼容性**，成为消费电子、工业设备与健康监测领域的理想选择。模块清晰的引脚布局和易用的设计使其快速集成成为可能，助力开发者快速实现功能创新，抢占市场先机！
+The SC7A20H module, with its high precision, low power consumption, and wide operating temperature range (-40°C to +85°C), as well as wide voltage compatibility (1.71V to 3.6V) and **1.8V digital IO support**, is an ideal choice for consumer electronics, industrial equipment, and health monitoring fields. Its clear pin layout and user-friendly design facilitate quick integration, enabling developers to achieve innovative functionalities and gain a competitive edge in the market.
 
-## **资源与支持**
+If you need further adjustments or have any other requirements, feel free to let me know!
 
-- **论坛**: [模组](https://forum.umetav.cn/t/module)
-    - **开放时间**: 北京时间每日早上8点到凌晨1点。
-- **QQ群**: 786239575
-- **技术支持邮箱**：[tech@umetav.cn](mailto:tech@umetav.cn)
+## **Resources and Support**
+
+- **Forum**: [Module](https://forum.umetav.cn/t/module)
+    - Open hours: Daily from 8 AM to 1 AM (Beijing Time).
+- **QQ Group**: 786239575
+- **Technical Support Email**: [tech@umetav.cn](https://gitee.com/link?target=mailto%3Atech%40umetav.cn)
 
