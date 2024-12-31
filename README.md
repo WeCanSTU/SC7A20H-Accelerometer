@@ -95,7 +95,6 @@ With its wide operating temperature range, high performance, and low power consu
 
 The SC7A20H module, with its high precision, low power consumption, and wide operating temperature range (-40°C to +85°C), as well as wide voltage compatibility (1.71V to 3.6V) and **1.8V digital IO support**, is an ideal choice for consumer electronics, industrial equipment, and health monitoring fields. Its clear pin layout and user-friendly design facilitate quick integration, enabling developers to achieve innovative functionalities and gain a competitive edge in the market.
 
-If you need further adjustments or have any other requirements, feel free to let me know!
 
 ## **Resources and Support**
 
