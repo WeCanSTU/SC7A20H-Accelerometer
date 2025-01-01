@@ -101,5 +101,5 @@ The SC7A20H module, with its high precision, low power consumption, and wide ope
 - **Forum**: [Module](https://forum.umetav.cn/t/module)
     - Open hours: Daily from 8 AM to 1 AM (Beijing Time).
 - **QQ Group**: 786239575
-- **Technical Support Email**: [tech@umetav.cn](https://gitee.com/link?target=mailto%3Atech%40umetav.cn)
+- **Technical Support Email**: [tech@umetav.cn](mailto:tech@umetav.cn)
 
